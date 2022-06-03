@@ -1,29 +1,23 @@
-/*
- * File: 7-print_tebahpla.c
- * Auth: Brennan D Baraban
- */
-
+#include "main.h"
 #include <stdio.h>
 
 /**
- * main - Prints the lowercase alphabet in reverse.
+ * print_chessboard - Print a chess board like output
+ * @a: 2d array of X * X
  *
- * Return: Always 0.
+ * Return: void
  */
-int main(void)
+
+
+void print_chessboard(char (*a)[8])
 {
-	char letter;
+	int i, j;
 
-	for (letter = 'z'; letter >= 'a'; letter--)
-		putchar(letter);
-
-	putchar('\n');
-
-	return (0);
+	for (i = 0; i < 8; i++)
+	{
+		for (j = 0; j < 8; j++)
+			_putchar(a[i][j]);
+		if (i < 8)
+			_putchar('\n');
+	}
 }
-
-    © 2022 GitHub, Inc.
-
-    Terms
-    Privacy
-    Sec
