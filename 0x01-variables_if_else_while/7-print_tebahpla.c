@@ -1,23 +1,18 @@
-#include "main.h"
 #include <stdio.h>
-
 /**
- * print_chessboard - Print a chess board like output
- * @a: 2d array of X * X
+ * main - Program entry point
  *
- * Return: void
+ * Return: 0 on success. Error code otherwise
  */
-
-
-void print_chessboard(char (*a)[8])
+int main(void)
 {
-	int i, j;
+	char z = 'z';
 
-	for (i = 0; i < 8; i++)
+	while (z >= 'a')
 	{
-		for (j = 0; j < 8; j++)
-			_putchar(a[i][j]);
-		if (i < 8)
-			_putchar('\n');
+		putchar(z);
+		z--;
 	}
+	putchar('\n');
+	return (0);
 }
