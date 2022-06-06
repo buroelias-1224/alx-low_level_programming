@@ -3,14 +3,10 @@
 /**
  * main - Entry point
  *
- * puts: print string
- *
  * Return: Always 0 (Success)
  */
 int main(void)
 {
-	char My_msg[] = "\"Programming is like building a multilingual puzzle";
-
-	puts(My_msg);
+	puts("\"Programming is like building a multilingual puzzle");
 	return (0);
 }
