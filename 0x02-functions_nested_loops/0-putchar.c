@@ -1,23 +1,23 @@
 #include "main.h"
 
-
 /**
- * main - Entry point
+ * main - check the code
  *
- * Return: nothing, return void
+ * Return: Always 0.
  */
 
 int main(void)
 {
-_putchar('_');
-_putchar('p');
-_putchar('u');
-_putchar('t');
-_putchar('c');
-_putchar('h');
-_putchar('a');
-_putchar('r');
-_putchar('\n');
+	char test[9] = "_putchar";
+	int i;
 
-return (0);
+	i = 0;
+	while (i < 8)
+	{
+		_putchar(test[i]);
+		i++;
+	}
+
+	_putchar('\n');
+	return (0);
 }
