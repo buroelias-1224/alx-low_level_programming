@@ -1,4 +1,4 @@
-#include "holberton.h"
+#include "main.h"
 /**
  *main - entry point.
  *Description: program starts and ends here.
@@ -6,7 +6,7 @@
  */
 int main(void)
 {
-char text[9] = "Holberton";
+char text[9] = "main";
 int i;
 for (i = 0; i < 9; i++)
 {
