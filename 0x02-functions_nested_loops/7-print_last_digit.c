@@ -1,19 +1,20 @@
 #include  "main.h"
 
-
 /**
- * _abs - print_alphabet
- * @c: its mine damnit
+ * print_last_digit - print_alphabet
+ * @num: its mine damnit
  *
- * Return: 1 if lowercase and 0 otherwise;
+ * Return: 1 if positive, return -1 if negative and 0 otherwise;
  * Does my stuff explained.
  */
-
-int _abs(int c)
+int print_last_digit(int num)
 {
-	if (c > 0)
-	{
-		return (c);
-	}
-	return (-c);
+	int n;
+
+	n = num % 10;
+
+	if (n < 0)
+		n = -n;
+	_putchar(n + '0');
+	return (n);
 }
