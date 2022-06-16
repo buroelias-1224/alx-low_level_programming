@@ -3,16 +3,30 @@
  * Auth: Buro Elias
  */
 #include "main.h"
+#include <stdio.h>
 
 /**
- * _isupper - a function that checks for uppercase character
- * @c: input
- * Return: 1 if c is uppercase, 0 otherwise
- */
-int _isupper(int c)
+  * _strcat - Concatenates two strings
+  * @dest: The destination string
+  * @src: The source string
+  *
+  * Return: A pointer to the resulting string dest
+  */
+char *_strcat(char *dest, char *src)
 {
-	if ((c >= 'A') && (c <= 'Z'))
-		return (1);
-	else
-		return (0);
+	int dlen = 0, i;
+
+	while (dest[dlen])
+	{
+		dlen++;
+	}
+
+	for (i = 0; src[i] != 0; i++)
+	{
+		dest[dlen] = src[i];
+		dlen++;
+	}
+
+	dest[dlen] = '\0';
+	return (dest);
 }
