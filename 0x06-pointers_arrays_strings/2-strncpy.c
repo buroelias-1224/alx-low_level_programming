@@ -2,24 +2,36 @@
  * File: 2-strncpy.c
  * Auth: Buro Elias
  */
-#include <stdio.h>
 #include "main.h"
 
 /**
- * _strchr - Entry point
- * @s: input
- * @c: input
- * Return: Always 0 (Success)
- */
-char *_strchr(char *s, char c)
+  * _strncpy - Copy a string
+  * @dest: The destination value
+  * @src: The source value
+  * @n: The copy limit
+  *
+  * Return: char value
+  */
+char *_strncpy(char *dest, char *src, int n)
 {
-	int i;
+	int a = 0, b = 0;
 
-	for (i = 0; s[i] >= '\0'; i++)
+	while (src[b])
 	{
-		if (s[i] == c)
-			return (s + i);
+		b++;
 	}
 
-	return (NULL);
+	while (a < n && src[a])
+	{
+		dest[a] = src[a];
+		a++;
+	}
+
+	while (a < n)
+	{
+		dest[a] = '\0';
+		a++;
+	}
+
+	return (dest);
 }
