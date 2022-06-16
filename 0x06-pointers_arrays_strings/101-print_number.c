@@ -2,7 +2,7 @@
  * File: 101-print_number.c
  * Auth: Buro Elias
  */
-#include "holberton.h"
+#include "main.h"
 
 /**
  * print_number - prints an integer;
