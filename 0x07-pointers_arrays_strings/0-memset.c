@@ -1,4 +1,8 @@
-#include "holberton.h"
+/*
+ * File: 0-memset.c
+ * Auth: Buro Elias
+ */
+#include "main.h"
 /**
  * _memset - fills memory with a constant byte.
  * @s: source string
