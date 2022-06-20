@@ -1,3 +1,7 @@
+/*
+ * File: 1-memcpy.c
+ * Auth: Buro Elias
+ */
 #include "main.h"
 /**
  * _memcpy - fills memory with another buffer.
