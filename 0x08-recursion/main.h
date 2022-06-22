@@ -1,10 +1,8 @@
-/**
- * main - check the code
- *
- * Return: Always 0.
- */
-int main(void)
-{
-    _puts_recursion("Puts with recursion");
-    return (0);
-}
+#ifndef MAIN_H
+#define MAIN_H
+
+int is_palindrome(char *s);
+void _putchar(char c);
+void _puts_recursion(char *s);
+
+#endif
