@@ -2,38 +2,41 @@
 #include <stdlib.h>
 
 /**
- * main - check the code for Holberton School students.
- * @argc: argument count.
- * @argv: argument vector.
+ * main - Prints the opcodes of this function
  *
- * Return: Always 0.
+ * @argc: The number of command-line arguments
+ *
+ * @argv: The command-line arguments
+ *
+ * Return: 0 if successful
  */
+
 int main(int argc, char *argv[])
 {
-	char *opc = (char *) main;
-	int i, nbytes;
+	int n_bytes, i;
+	int (*prog)(int, char **) = &main;
 
-	if (argc != 2)
+	if (argc == 2)
+	{
+		n_bytes = atoi(argv[1]);
+		if (n_bytes < 0)
+		{
+			printf("Error\n");
+			exit(2);
+		}
+		for (i = 0; i < n_bytes; i++)
+			printf("%02x%c",
+					(unsigned char)*((char *)prog + i), i < n_bytes - 1 ? ' ' : '\n');
+	}
+	else
 	{
 		printf("Error\n");
 		exit(1);
 	}
 
-	nbytes = atoi(argv[1]);
+	return (0);
 
-	if (nbytes < 0)
-	{
-		printf("Error\n");
-		exit(2);
-	}
-
-	for (i = 0; i < nbytes; i++)
-	{
-		printf("%02x", opc[i] & 0xFF);
-		if (i != nbytes - 1)
-			printf(" ");
-	}
-
+}
 	printf("\n");
 	return (0);
 }
